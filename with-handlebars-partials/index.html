@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>​
+  <script type="text/javascript" src="Handlebars.js"></script>​
+  <script type="text/javascript" src="main.js"></script>​
+  <title>Document</title>
+</head>
+<body>
+  The List of Shoes:
+  <ul class="shoesNav"></ul>
+
+  <script id="shoe-template" type="x-handlebars-template">
+    {{#each allShoes}}
+      <li class="shoes">
+        <span class="shoe-name">{{name}} - </span> price: {{price}}
+        {{>description}}
+      </li>
+    {{/each}}
+  </script>
+
+  <script id="shoe-description" type="x-handlebars-template">
+  <ul>
+    <li>{{color}}</li>
+    <li>{{size}}</li>
+  </ul>
+  </script>
+</body>
+</html>
